@@ -28,11 +28,17 @@ body {
 
 .title {
   height: 60px;
-  border-bottom: 4px solid #E1E8EE;/*1px solid #E1E8EE;*/
+  border-bottom: 1px solid #E1E8EE;/*1px solid #E1E8EE;*/
   padding: 20px 30px;
   color: #5E6977;
   font-size: 18px;
   font-weight: 400;
+}
+.thead {
+  height: auto;
+  border-bottom: 4px solid #E1E8EE;/*1px solid #E1E8EE;*/
+  padding: 10px 20px;
+  color: #5E6977;display:flex;
 }
 .total {
   height: auto;
@@ -43,18 +49,25 @@ body {
 }
 .total:nth-of-type(1) {
 	flex-grow: 1;
+	flex-direction:row;
 }
 .total:nth-of-type(2) {
 	flex-grow: 3;
 	display:flex;
 	flex-direction:column;
 }
+.itemcontainer{
+	display:block;
+	border-bottom:  1px solid #E1E8EE;
+}
 .item {
   padding: 20px 30px;
   height: 120px;
   display: flex;
   /*newly added*/
-  border-bottom:  1px solid #E1E8EE;
+}
+.dynadiv{
+	display:flex;
 }
 .subtext{
 	opacity:0.5;
@@ -182,6 +195,7 @@ input:focus {
   font-size: 16px;
   color: #43484D;
   font-weight: 300;
+  display:block;
 }
 .bglessbutton {
     background-color: Transparent;
@@ -237,6 +251,7 @@ input:focus {
 }
 /* Modal Content */
 .modal-content {
+	display:block;
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -260,7 +275,88 @@ input:focus {
 }
 .modal-items{
 	display:flex;
-	justify-content: space-between;
+	justify-content: space-around;
+}
+.item1{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction:column;
+	border-top:  4px solid #E1E8EE;
+}
+.item2{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+.sizechart{
+	display:flex;
+}
+.sizechart > button{
+	width:25px;
+	height:25px;
+	margin:5px;
+}
+.sizeqty{
+	display:flex;
+}
+.smalldevicep{
+	display:none;
+}
+.action1{
+	display:block;
+}
+.action2{
+	display:none;
+}
+/* Style The Dropdown Button */
+.dropbutns {
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+	margin:5px;
+	border:1px solid gray;
+	border-radius:3px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }
 /* Responsive */
 @media (max-width: 800px) {
@@ -269,13 +365,33 @@ input:focus {
     height: auto;
     overflow: hidden;
   }
+  .itemcontainer{
+	display:flex;
+	flex-direction:column;
+  }
   .item {
     height: auto;
-    flex-wrap: wrap;
+	align-items:center;
+    /*flex-wrap: wrap;*/
     justify-content: center;
   }
+  .dynadiv{
+	flex-direction:column;
+	align-items:center;
+    justify-content: center;
+  }
+  .thead{
+	  display:none;
+  }
+  .action2{
+	  display:block!important;
+	  text-align:center;
+  }
+  .action1{
+	  display:none!important;
+  }
   .image img {
-    width: 50%;
+    width: 100%;
   }
   .image,
   .quantity,
@@ -287,4 +403,43 @@ input:focus {
   .buttons {
     margin-right: 20px;
   }
+  .helpsec{
+	display:none;
+  }
+  
+  .total{
+	display: initial;
+	font-size:60%;
+  }
+  #promodiv{
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+  }
+  .quantity {
+	display:flex;	
+	justify-content:center;
+	align-items:center;
+	}
+  .smalldevicep{
+	display:block;
+	}
+	.modal-items{
+		display:flex;
+		flex-direction:column;
+		justify-content: space-around;
+	}
+	.dropbutns {
+		font-size:70%;
+	}
+	.modal-content {
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}
+	.total-price{	
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	}
 }
