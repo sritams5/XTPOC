@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <meta name="robots" content="noindex,follow" />
+  </head>
+  <body>
+    <div class="shopping-cart">
+      <!-- Title -->
+      <div class="title">
+        Shopping Bag
+      </div>
+
+      <!-- Product #1 -->
+      <div class="item">
+        <!--<div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>-->
+
+        <div class="image">
+          <img src="item-1.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Common Projects</span>
+          <span>Bball High</span>
+          <span>White</span>
+		  <span class="actionclass"><button class="bglessbutton editBtn">EDIT</button>|<button class="bglessbutton">X REMOVE</button>|<button class="bglessbutton">SAVE FOR LATER</button></span>
+        </div>
+        <div class="total-price">S</div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$549</div>
+      </div>
+
+      <!-- Product #2 -->
+      <div class="item">
+        <!--<div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>-->
+
+        <div class="image">
+          <img src="item-2.png" alt=""/>
+        </div>
+
+        <div class="description">
+          <span>Maison Margiela</span>
+          <span>Future Sneakers</span>
+          <span>White</span>
+		  <span class="actionclass"><button class="bglessbutton editBtn">EDIT</button>|<button class="bglessbutton">X REMOVE</button>|<button class="bglessbutton">SAVE FOR LATER</button></span>
+        </div>
+        <div class="total-price">S</div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$870</div>
+      </div>
+
+      <!-- Product #3 -->
+      <div class="item">
+        <!--<div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
+        </div>-->
+
+        <div class="image">
+          <img src="item-3.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Our Legacy</span>
+          <span>Brushed Scarf</span>
+          <span>Brown</span>
+		  <span class="actionclass"><button class="bglessbutton editBtn">EDIT</button>|<button class="bglessbutton">X REMOVE</button>|<button class="bglessbutton">SAVE FOR LATER</button></span>
+        </div>
+        <div class="total-price">S</div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$349</div>
+      </div>
+	  <div class="total">
+		<div>
+		<p><b>Need help</b><br/>
+		<b>or have questions?</b></p><br/>
+		<p>Call Customer Service at<br/>
+		1-800-555-5555</p><br/>
+		<p><u>Chat with one of<br/>
+		our Stylist</u></p><br/>
+		<p><u>See return<br/>
+		& exchange policy</u></p>
+		</div>
+		<div>
+			<div id="promodiv" class="totalc">
+				<div>
+					<p>ENTER PROMOTION CODE OR GIFT CARD</p>
+				</div>
+				<div>
+					<input type="text"></input><button class="transbutn">APPLY</button>
+				</div>
+			</div>
+			<div id="costdiv">
+				<div id="stotaldiv" class="totalc">
+					<div><p><h5>SUBTOTAL</h5></p></div>
+					<div><p><h5>$37.00</h5></p></div>
+				</div>
+				<div id="pcodediv" class="totalc">
+					<div><p><h5>PROMOTION CODE <strong>JF 10</strong> APPLIED</h5></p></div>
+					<div><p><h5>-$7.00</h5></p></div>
+				</div>
+				<div id="shippingcostdiv" class="totalc">
+					<div>
+						<p><h5>ESTIMATED SHIPPING</h5>
+						<span class="subtext">you qualify for free shipping because your order is abhove $50*</span></p>
+					</div>
+					<div><p><h5>$37.00</h5></p></div>
+				</div>
+				<div id="estimateddiv" class="totalc">
+					<div>
+						<p><h5><strong>ESTIMATED TOTAL</strong></h5>
+						<span class="subtext">Tax will be applied during checkout</span></p>
+					</div>
+					<div><p><h5>$30.00</h5></p></div>
+				</div>
+			</div>
+			<div id="finalsubmit">
+				<div id="submitdiv">
+					<p><u>CONTINUE SHOPPING</u></p>
+					<button class="buttons-primary">CHECKOUT</button>
+				</div id="notediv">
+				<div>
+					<p class="subtext">Secure checkout: Shopping is always safe & secure</p>
+				</div>
+			</div>
+		</div>
+      </div>
+    </div>
+	<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-items">
+		<div>
+			<p>Some text in the Modal..</p>
+		</div>
+		<div>
+			<img src="item-1.png" alt="" />
+		</div>
+	</div>
+  </div>
+
+</div>
+	<script src="./myscripts.js"></script>
+  </body>
+</html>
